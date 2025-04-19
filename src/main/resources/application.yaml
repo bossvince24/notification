@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #RabbitMQ
 spring:
   rabbitmq:
@@ -13,19 +12,5 @@ spring:
     listener:
       simple:
         default-requeue-rejected: false
-=======
-#RabbitMQ
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-    exchange:
-      name: event-exchange
-    queue:
-      name: event-notification-queue
-    listener:
-      simple:
-        default-requeue-rejected: false
->>>>>>> 613eb21 (add dlq)
+
+
