@@ -1,0 +1,21 @@
+#RabbitMQ
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    exchange:
+      name: event-exchange
+    queue:
+      name: event-notification-queue
+    dlq:
+      exchange: event-dlq-exchange
+      name: event-notification-queue.dlq
+      routing-key: event.dlq
+
+
+logging:
+  level:
+    org.springframework.amqp.rabbit.listener: DEBUG
+    org.springframework.amqp.rabbit.core.RabbitTemplate: DEBUG
